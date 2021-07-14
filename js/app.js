@@ -29,4 +29,5 @@ const radios = document.querySelectorAll('input[type="radio"]');
 
     // Actual functionality
     (function () {
+        // document.querySelector('input[name="tip-percentage"]:checked').value;
     })();
