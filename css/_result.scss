@@ -6,12 +6,14 @@
   min-height: 20rem;
   &__amountShow {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
   }
 }
 .title {
+  flex: 0 1 auto;
   span:nth-last-child(1) {
     opacity: 0.6;
     font-size: 0.8rem;
@@ -32,9 +34,28 @@ button {
 }
 
 .amount {
+  flex: 1 1 7rem;
+  text-align: right;
   span {
     font-weight: 700;
     font-size: 24px * 2;
     color: color(primary);
+  }
+}
+
+@media (max-width: 393px) {
+  .amount {
+    span {
+      font-weight: 700;
+      font-size: 20px * 2;
+      color: color(primary);
+    }
+  }
+  .result {
+    min-height: 30rem;
+    padding: 20px;
+  }
+  button {
+    width: calc(100% - 40px);
   }
 }

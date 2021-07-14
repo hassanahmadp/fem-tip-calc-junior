@@ -98,6 +98,8 @@ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -105,6 +107,12 @@ span {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px 0;
+}
+
+.title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .title span:nth-last-child(1) {
@@ -125,10 +133,32 @@ button {
   border-radius: 5px;
 }
 
+.amount {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 7rem;
+          flex: 1 1 7rem;
+  text-align: right;
+}
+
 .amount span {
   font-weight: 700;
   font-size: 48px;
   color: #26c0ab;
+}
+
+@media (max-width: 393px) {
+  .amount span {
+    font-weight: 700;
+    font-size: 40px;
+    color: #26c0ab;
+  }
+  .result {
+    min-height: 30rem;
+    padding: 20px;
+  }
+  button {
+    width: calc(100% - 40px);
+  }
 }
 
 .calculator {
@@ -278,6 +308,9 @@ button {
 }
 
 @media (max-width: 724px) {
+  .bodyClone {
+    min-height: 700px;
+  }
   .tipCalculator {
     overflow: scroll;
     overflow-x: hidden;

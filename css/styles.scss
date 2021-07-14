@@ -91,6 +91,9 @@ span {
 @import "./calc";
 
 @media (max-width: 724px) {
+  .bodyClone {
+    min-height: 700px;
+  }
   .tipCalculator {
     overflow: scroll;
     overflow-x: hidden;
