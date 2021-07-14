@@ -11,28 +11,63 @@
   <body>
     <div class="bodyClone">
       <img src="./images/logo.svg" alt="logo" class="logo" />
+
       <div class="tipCalculator">
         <section class="calculator">
-          <div class="inputs">
-            <label for="#bill">Bill</label>
-            <div class="input-cont">
-              <input type="number" id="bill" />
-              <img src="./images/icon-dollar.svg" alt="icon dollar" />
+          <main>
+            <div class="inputs">
+              <label for="#bill">Bill</label>
+              <div class="input-cont">
+                <input type="number" id="bill" />
+                <img src="./images/icon-dollar.svg" alt="icon dollar" />
+              </div>
             </div>
-          </div>
-
-          <div class="inputs">
-            <label for="#stp">Select Tip %</label>
-          </div>
-          <div class="inputs">
-            <label for="#nop">Number of people</label>
-            <div class="input-cont">
-              <input type="number" id="nop" />
-              <img src="./images/icon-person.svg" alt="icon person" />
+            <div class="inputs">
+              <label for="#stp">Select Tip %</label>
+              <div class="radio-inputs">
+                <input type="radio" name="tip-percentage" id="5%" value="5" />
+                <label for="5%">5%</label>
+                <input type="radio" name="tip-percentage" id="10%" value="10" />
+                <label for="10%">10%</label>
+                <input type="radio" name="tip-percentage" id="15%" value="15" />
+                <label for="15%">15%</label>
+                <input type="radio" name="tip-percentage" id="25%" value="25" />
+                <label for="25%">25%</label>
+                <input type="radio" name="tip-percentage" id="50%" value="50" />
+                <label for="50%">50%</label>
+                <input type="number" placeholder="custom" />
+              </div>
             </div>
-          </div>
+            <div class="inputs">
+              <label for="#nop">Number of people</label>
+              <div class="input-cont">
+                <input type="number" id="nop" />
+                <img src="./images/icon-person.svg" alt="icon person" />
+              </div>
+            </div>
+          </main>
         </section>
-        <section class="result"></section>
+        <section class="result">
+          <main>
+            <div class="result__amountShow">
+              <div class="title">
+                <span>Tip Amount</span>
+                <br />
+                <span>/ person</span>
+              </div>
+              <div class="amount"><span>$32.79</span></div>
+            </div>
+            <div class="result__amountShow">
+              <div class="title">
+                <span>Tip Amount</span>
+                <br />
+                <span>/ person</span>
+              </div>
+              <div class="amount"><span>$32.79</span></div>
+            </div>
+            <button class="result__reset">RESET</button>
+          </main>
+        </section>
       </div>
     </div>
   </body>
