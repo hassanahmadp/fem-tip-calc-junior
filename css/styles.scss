@@ -6,7 +6,7 @@ $colors: (
   dark-grayish-cyan-1: hsl(186, 14%, 43%),
   dark-grayish-cyan-2: hsl(184, 14%, 56%),
   back: hsl(185, 41%, 84%),
-  light-grayish-cyan-2: hsl(189, 41%, 97%),
+  input-back: hsl(189, 41%, 97%),
 );
 
 @function color($c) {
@@ -19,13 +19,40 @@ $colors: (
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.5);
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="number"]:focus {
+  outline: 3px solid lighten(color(primary), 30%);
+  border-radius: 10px;
+}
+input.active[type="number"]:focus {
+  outline-color: rgb(250, 77, 77);
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .bodyClone {
   position: relative;
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
   background: color(back);
-  min-height: 800px;
+  min-height: 900px;
   font-family: "Space Mono", monospace;
 }
 
@@ -52,9 +79,28 @@ $colors: (
   flex-wrap: wrap;
 }
 section {
-  flex: 1 1 300px;
+  flex: 1 1 330px;
   border-radius: 27px;
+}
+
+span {
+  white-space: nowrap;
 }
 
 @import "./result";
 @import "./calc";
+
+@media (max-width: 724px) {
+  .tipCalculator {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80vh;
+    min-height: none;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
