@@ -22,7 +22,7 @@
 
 button {
   position: absolute;
-  background: lighten(color(primary), 30%);
+  background: color(dark-grayish-cyan-1);
   border: none;
   width: calc(100% - 80px);
   bottom: 40px;
@@ -31,6 +31,9 @@ button {
   font-size: 18px;
   height: 48px;
   border-radius: 5px;
+  &.active {
+    background: lighten(color(primary), 30%);
+  }
 }
 
 .amount {

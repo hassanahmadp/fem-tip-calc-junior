@@ -42,13 +42,13 @@ input[type="number"] {
   position: relative;
   height: 100vh;
   background: #c5e4e7;
-  min-height: 900px;
+  min-height: 700px;
   font-family: "Space Mono", monospace;
 }
 
 .logo {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -122,7 +122,7 @@ span {
 
 button {
   position: absolute;
-  background: #95eadf;
+  background: #5e7a7d;
   border: none;
   width: calc(100% - 80px);
   bottom: 40px;
@@ -131,6 +131,10 @@ button {
   font-size: 18px;
   height: 48px;
   border-radius: 5px;
+}
+
+button.active {
+  background: #95eadf;
 }
 
 .amount {
@@ -309,7 +313,7 @@ button {
 
 @media (max-width: 724px) {
   .bodyClone {
-    min-height: 700px;
+    min-height: 600px;
   }
   .tipCalculator {
     overflow: scroll;

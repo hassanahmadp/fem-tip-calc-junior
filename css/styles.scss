@@ -52,13 +52,13 @@ input[type="number"] {
   position: relative;
   height: 100vh;
   background: color(back);
-  min-height: 900px;
+  min-height: 700px;
   font-family: "Space Mono", monospace;
 }
 
 .logo {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -92,7 +92,7 @@ span {
 
 @media (max-width: 724px) {
   .bodyClone {
-    min-height: 700px;
+    min-height: 600px;
   }
   .tipCalculator {
     overflow: scroll;
